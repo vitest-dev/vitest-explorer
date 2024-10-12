@@ -207,8 +207,23 @@
           "markdownDescription": "The arguments to pass to the shell executable. This is applied only when `vitest.shellType` is `terminal`.",
           "type": "array",
           "scope": "resource"
+        },
+        "vitest.previewBrowser": {
+          "markdownDescription": "Open the visible browser when running tests in the Browser Mode.",
+          "type": "boolean",
+          "default": false,
+          "scope": "resource"
         }
       }
+    },
+    "views": {
+      "test": [
+        {
+          "type": "webview",
+          "id": "vitest.webviewSettings",
+          "name": "Vitest"
+        }
+      ]
     }
   },
   "scripts": {

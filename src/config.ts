@@ -59,10 +59,13 @@ export function getConfig(workspaceFolder?: WorkspaceFolder) {
   const shellType = get<'child_process' | 'terminal'>('shellType', 'child_process')
   const nodeExecArgs = get<string[] | undefined>('nodeExecArgs')
 
+  const previewBrowser = get<boolean>('previewBrowser', false)
+
   return {
     env: get<null | Record<string, string>>('nodeEnv', null),
     debugExclude: get<string[]>('debugExclude', []),
     filesWatcherInclude,
+    previewBrowser,
     terminalShellArgs,
     terminalShellPath,
     shellType,
